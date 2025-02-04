@@ -1,0 +1,16 @@
+name: Demo Listing  # Name of the GitHub Actions workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to the main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2  # Fetch the code from your repository
+        
+      - name: List files in the repository
+        run: ls -la  # This will now list the files from your repository
